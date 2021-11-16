@@ -1,6 +1,7 @@
 import {Component} from "react";
 import axios  from "axios";
 import {Users} from "./Users.type";
+import './GetUsers.css'
 
 // class GetUsers extends Component{
 //     constructor() {
@@ -27,55 +28,62 @@ export class GetUsers extends Component<any, any>{
             })
     }
 
-    render() {
+    renderTableHeader() {
+        let tableHeader = Object.keys(this.state.users[0])
+        return tableHeader.map(key => {
+            return <th key={key}>{key.toUpperCase()}</th>
+        })
+    }
+
+    renderTableData() {
         return this.state.users.map((user: Users) => {
-            return (<div key={user.id}>
-                    <h2>{user.id}</h2>
-                    <h2>{user.name}</h2>
-                    <h2>{user.username}</h2>
-                    <h2>{user.email}</h2>
-                    <h2>
+            return (
+                <tr key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.name}</td>
+                    <td>{user.username}</td>
+                    <td>{user.email}</td>
+                    <td>
                         {user.address.street}
                         <br/> {user.address.suite}
                         <br/> {user.address.city}
                         <br/> ZipCode : {user.address.zipcode}
                         <br/> Location : {user.address.geo.lat}, {user.address.geo.lng}
-                    </h2>
-                    <h2>{user.phone}</h2>
-                    <h2>{user.website}</h2>
-                    <h2>
+                    </td>
+                    <td>{user.phone}</td>
+                    <td>{user.website}</td>
+                    <td>
                         {user.company.name}
                         <br/> {user.company.catchPhrase}
                         <br/> {user.company.bs}
-                    </h2>
-                </div>
+                    </td>
+                </tr>
             )}
         )
     }
 
-    // render() {
-    //     return this.state.users.map(user => {
-    //         const { id, name, username, email, address, phone, website, company } = user
-    //         return (
-    //             <tr key={id}>
-    //                 <td>{id}</td>
-    //                 <td>{name}</td>
-    //                 <td>{username}</td>
-    //                 <td>{email}</td>
-    //                 <td>{address}</td>
-    //                 <td>{phone}</td>
-    //                 <td>{website}</td>
-    //                 {/*<td>{this.showComany(company)}</td>*/}
-    //             </tr>
-    //         )}
-    //     )
-    // }
-
-    // render() { //Whenever our class runs, render method will be called automatically, it may have already defined in the constructor behind the scene.
-    //     return (
-    //         <div>
-    //             <h1>{this.state.users.length}</h1>
-    //         </div>
-    //     )
-    // }
+    render() {
+        return (
+            <div className="GetUsers">
+                {
+                    this.state.users.length ?
+                        <div>
+                            <h1 id="heading">List of Users</h1>
+                            <table id="users">
+                                <thead>
+                                <tr>{this.renderTableHeader()}</tr>
+                                </thead>
+                                <tbody>
+                                {this.renderTableData()}
+                                </tbody>
+                            </table>
+                        </div>
+                        : null
+                }
+                {
+                    this.state.err ? <div>{this.state.err}</div> : null
+                }
+            </div>
+        )
+    }
 }
