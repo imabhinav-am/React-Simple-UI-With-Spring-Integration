@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5e70c3e7-2d21-4ca2-989e-c62bbfca2675" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GetUsers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GetUsers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users.type.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -50,7 +52,10 @@
       <option name="presentableId" value="Default" />
       <updated>1637041288741</updated>
       <workItem from="1637041296139" duration="4000" />
-      <workItem from="1637041309569" duration="12155000" />
+      <workItem from="1637041309569" duration="12451000" />
+      <workItem from="1637142674624" duration="622000" />
+      <workItem from="1637143408240" duration="459000" />
+      <workItem from="1637143886781" duration="5622000" />
     </task>
     <servers />
   </component>

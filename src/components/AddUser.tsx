@@ -6,7 +6,7 @@ export class AddUser extends Component {
   state: Users = {
     address: {
       street: "",
-      geo: { lat: "", lng: "" },
+      geo: { lat: 0, lng: 0 },
       suite: "",
       zipcode: "",
       city: "",
@@ -61,7 +61,7 @@ export class AddUser extends Component {
     event.preventDefault();
     console.log(this.state);
     axios
-      .post("https://jsonplaceholder.typicode.com/users", this.state)
+      .post("http://localhost:8080/users", this.state)
       .then((response) => {
         alert("Submitted Successfully!");
         console.log(response);

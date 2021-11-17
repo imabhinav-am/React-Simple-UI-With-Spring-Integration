@@ -11,7 +11,11 @@ export class GetUsers extends Component {
 
   componentDidMount() {
     axios
-      .get(" https://jsonplaceholder.typicode.com/users")
+      .get("http://localhost:8080/users", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((response: { data: Users }) => {
         console.log(response);
         this.setState({ users: response.data });

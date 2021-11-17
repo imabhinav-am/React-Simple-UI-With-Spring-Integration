@@ -18,8 +18,8 @@ export type Address = {
 };
 
 export type Geo = {
-  lat: string;
-  lng: string;
+  lat: number;
+  lng: number;
 };
 
 export type Company = {
